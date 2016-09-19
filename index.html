@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>JS tests</title>
-    <link href="styles.css"
+    <link href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
-
+<button onclick="alpha()"><h1>Считать кроликов!</h1></button>
+<div id="tableB"></div>
+<form>
+    <div>
+<label for="age">age</label>
+<input id="age" maxlength="2" required/>
+    </div>
+    <div>
+<label for="name">name</label>
+<input id="name" type="text" maxlength="10" required/>
+    </div>
+    <div>
+<label for="height">height</label>
+<input id="height" maxlength="3" required/>
+    </div>
+<button onclick="add()"><h4>добавить</h4></button>
+</form>
 </body>
 </html>
