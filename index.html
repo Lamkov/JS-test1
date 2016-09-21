@@ -5,13 +5,11 @@
     <title>JS tests</title>
     <link href="CSS/styles.css">
     <link href="CSS/bootstrap.min.css">
-    <script src="JS/jquery-1.12.2.min.js"></script>
     <script src="JS/scripts.js"></script>
-    <script src="JS/bootstrap.min.js"></script>
 </head>
 <body  onload="alpha()">
 <div id="tableB"></div>
-<form>
+<form id="myForm">
     <div>
 <label for="age">age</label>
 <input id="age" maxlength="2" required/>
@@ -24,7 +22,8 @@
 <label for="height">height</label>
 <input id="height" maxlength="3" required/>
     </div>
-<button onclick="add()"><h4>добавить</h4></button>
+<button id="button" onclick="myFunction(); return false;"><h4>добавить</h4></button>
 </form>
+<div id="demo"></div>
 </body>
 </html>

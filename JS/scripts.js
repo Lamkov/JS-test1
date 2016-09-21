@@ -19,7 +19,6 @@ for (var i = 0; i < basictable.length; i++) {
 table +="</table>";
 document.getElementById("tableB").innerHTML = table;
 }
-
 function add(){
     var Person = {};
     Person.age = document.getElementById("age").value;
@@ -29,4 +28,28 @@ function add(){
     basictable.push(Person);
     alpha();
 
+}
+function reset() {
+    document.getElementById("age").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("height").value = "";
+}
+function myFunction() {
+    var x, y, z, text;
+    x = document.getElementById("age").value;
+    y = document.getElementById("name").value;
+    z = document.getElementById("height").value;
+    // If x is Not a Number or less than one or greater than 10
+    if ((isNaN(x) || x < 1 || x > 99)&&(typeof y === 'string')&&(isNaN(z) || z < 100 || z > 230)) {
+        text = "Input not valid";
+        reset();
+    } else if ((x!=='')&&(y!=='')&&(z!=='')) {
+        text = "Input OK";
+        add();
+        reset();
+    } else {
+        text = "Input not valid";
+        reset();
+    }
+    document.getElementById("demo").innerHTML = text;
 }
