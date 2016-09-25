@@ -9,6 +9,7 @@ function alpha (){
 var table = "<table class='basic_table' border='1|1'>";
 for (var i = 0; i < basictable.length; i++) {
     table +="<tr>";
+    table +="<td><input name='checker' type='checkbox'/></td>";
     table +="<td>"+basictable[i]["age"]+"</td>";
     table +="<td>"+basictable[i]["name"]+"</td>";
     table +="<td>"+basictable[i]["height"]+"</td>";
@@ -40,7 +41,7 @@ function myFunction() {
     y = document.getElementById("name").value;
     z = document.getElementById("height").value;
     // If x is Not a Number or less than one or greater than 10
-    if ((isNaN(x) || x < 1 || x > 99)&&(typeof y === 'string')&&(isNaN(z) || z < 100 || z > 230)) {
+    if ((isNaN(x) || x < 1 || x > 99)&&(typeof y === 'string')&&(isNaN(z) || z > 100 || z < 230)) {
         text = "Input not valid";
         reset();
     } else if ((x!=='')&&(y!=='')&&(z!=='')) {
@@ -52,4 +53,8 @@ function myFunction() {
         reset();
     }
     document.getElementById("demo").innerHTML = text;
+}
+function Remove(){
+    var checked = document.getElementsByTagName("input:checked");
+    basictable.splice(checked, 1);
 }
