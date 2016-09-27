@@ -55,6 +55,16 @@ function myFunction() {
     document.getElementById("demo").innerHTML = text;
 }
 function Remove(){
-    var checked = document.getElementsByTagName("input:checked");
+    var checked = document.getElementById("myCheck").checked.value;
     basictable.splice(checked, 1);
+}
+function check() {
+    var tab = document.getElementsByClassName("basic_table");
+    var length = tab.getElementsByTagName('input').checked;
+    if(length == true) {
+    alert ("The checkBox is checked");
+    } else {
+        alert ("The checkBox is unchecked");
+        document.getElementById("demo").innerHTML = length;
+    }
 }
