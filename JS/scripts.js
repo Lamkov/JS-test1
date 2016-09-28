@@ -6,10 +6,10 @@ var basictable =[
 ];
 
 function alpha (){
-var table = "<table class='basic_table' border='1|1'>";
+var table = "<table class='table'>";
 for (var i = 0; i < basictable.length; i++) {
     table +="<tr>";
-    table +="<td><input name='checker' type='checkbox'/></td>";
+    table +="<td><input name='checker' class='checker' type='checkbox'/></td>";
     table +="<td>"+basictable[i]["age"]+"</td>";
     table +="<td>"+basictable[i]["name"]+"</td>";
     table +="<td>"+basictable[i]["height"]+"</td>";
@@ -54,17 +54,13 @@ function myFunction() {
     }
     document.getElementById("demo").innerHTML = text;
 }
-function Remove(){
-    var checked = document.getElementById("myCheck").checked.value;
-    basictable.splice(checked, 1);
+function Remove(k){
+    basictable.splice(k, 1);
 }
+
 function check() {
-    var tab = document.getElementsByClassName("basic_table");
-    var length = tab.getElementsByTagName('input').checked;
-    if(length == true) {
-    alert ("The checkBox is checked");
-    } else {
-        alert ("The checkBox is unchecked");
-        document.getElementById("demo").innerHTML = length;
+    var prog = document.getElementsByClassName("checker").length;
+    for (i=0; i<=prog.length; i++) {
+        Remove(i)
     }
 }

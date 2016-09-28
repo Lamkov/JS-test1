@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>JS tests</title>
-    <link href="CSS/styles.css">
-    <link href="CSS/bootstrap.min.css">
+    <link href="CSS/styles.css" rel="stylesheet">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
     <script src="JS/scripts.js"></script>
 </head>
 <body  onload="alpha()">
+<div class="container">
 <div id="tableB"></div>
 <form id="myForm">
     <div>
 <label for="age">age</label>
-<input id="age" maxlength="2" required/>
+<input id="age" maxlength="2" class="form-control" required/>
     </div>
     <div>
 <label for="name">name</label>
-<input id="name" type="text" maxlength="10" required/>
+<input id="name" type="text" class="form-control" maxlength="10" required/>
     </div>
     <div>
 <label for="height">height</label>
-<input id="height" maxlength="3" required/>
+<input id="height" maxlength="3" class="form-control" required/>
     </div>
-<button id="button" onclick="myFunction(); return false;"><h4>добавить</h4></button>
+<button id="button" class='general-button btn btn-default' onclick="myFunction(); return false;"><h4>добавить</h4></button>
 </form>
-<button id="remove" onclick="check(); return false;"><h4>удалить</h4></button>
+<button id="remove" class='general-button btn btn-default' onclick="check(); return false;"><h4>удалить</h4></button>
 <div id="demo"></div>
+</div>
 </body>
 </html>

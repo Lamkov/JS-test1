@@ -1,4 +1,9 @@
-
 label {
     display: block;
+}
+#tableB {
+    margin-top: 50px;
+}
+.general-button {
+    margin-top: 10px;
 }
