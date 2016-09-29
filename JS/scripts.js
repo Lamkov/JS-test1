@@ -1,18 +1,18 @@
-var basictable =[
+var usersArray =[
     {age:25, name:"vasya", height:180},
     {age:30, name:"oleg", height:179},
     {age:20, name:"vanya", height:185},
     {age:45, name:"grigorij", height:175}
 ];
 
-function alpha (){
+function drawTable (){
 var table = "<table class='table'>";
-for (var i = 0; i < basictable.length; i++) {
+for (var i = 0; i < usersArray.length; i++) {
     table +="<tr>";
     table +="<td><input name='checker' class='checker' type='checkbox'/></td>";
-    table +="<td>"+basictable[i]["age"]+"</td>";
-    table +="<td>"+basictable[i]["name"]+"</td>";
-    table +="<td>"+basictable[i]["height"]+"</td>";
+    table +="<td>"+usersArray[i]["age"]+"</td>";
+    table +="<td>"+usersArray[i]["name"]+"</td>";
+    table +="<td>"+usersArray[i]["height"]+"</td>";
 
     table +="</tr>";
 
@@ -26,8 +26,8 @@ function add(){
     Person.name = document.getElementById("name").value;
     Person.height = document.getElementById("height").value;
 
-    basictable.push(Person);
-    alpha();
+    usersArray.push(Person);
+    drawTable();
 
 }
 function reset() {
@@ -54,13 +54,26 @@ function myFunction() {
     }
     document.getElementById("demo").innerHTML = text;
 }
-function Remove(k){
-    basictable.splice(k, 1);
+function Remove(index){
+    usersArray.splice(index, index+1);
 }
 
-function check() {
-    var prog = document.getElementsByClassName("checker").length;
-    for (i=0; i<=prog.length; i++) {
-        Remove(i)
+function deleteSelectedRows() {
+    var inputs = document.getElementsByClassName("checker");
+    for (i=0; i<inputs.length; i++) {
+        if(inputs[i].checked) {
+            Remove(i);
+        }
     }
+    drawTable();
+}
+
+function copySelectedRows(){
+    var inputs = document.getElementsByClassName("checker");
+    for (i=0; i<inputs.length; i++) {
+        if(inputs[i].checked) {
+            usersArray.splice(i, 0, usersArray[i]);
+        }
+    }
+    drawTable();
 }

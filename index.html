@@ -7,7 +7,7 @@
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
     <script src="JS/scripts.js"></script>
 </head>
-<body  onload="alpha()">
+<body  onload="drawTable()">
 <div class="container">
 <div id="tableB"></div>
 <form id="myForm">
@@ -25,7 +25,8 @@
     </div>
 <button id="button" class='general-button btn btn-default' onclick="myFunction(); return false;"><h4>добавить</h4></button>
 </form>
-<button id="remove" class='general-button btn btn-default' onclick="check(); return false;"><h4>удалить</h4></button>
+<button id="remove" class='general-button btn btn-default' onclick="deleteSelectedRows(); return false;"><h4>удалить</h4></button>
+<button id="copy" class='general-button btn btn-default' onclick="copySelectedRows(); return false;"><h4>копировать</h4></button>
 <div id="demo"></div>
 </div>
 </body>
