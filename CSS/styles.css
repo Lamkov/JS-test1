@@ -7,3 +7,11 @@ label {
 .general-button {
     margin-top: 10px;
 }
+
+#validationMessage {
+	color: red;
+}
+
+#myForm {
+	margin-top:30px
+}

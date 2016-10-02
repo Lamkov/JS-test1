@@ -9,25 +9,34 @@
 </head>
 <body  onload="drawTable()">
 <div class="container">
+
+<h1>Table with actions</h1>
 <div id="tableB"></div>
+
+<button id="remove" class='general-button btn btn-default' onclick="deleteSelectedRows(); return false;">удалить</button>
+<button id="copy" class='general-button btn btn-default' onclick="copySelectedRows(); return false;">копировать</button>
+
 <form id="myForm">
     <div>
-<label for="age">age</label>
+<label for="age">Возраст</label>
 <input id="age" maxlength="2" class="form-control" required/>
     </div>
     <div>
-<label for="name">name</label>
+<label for="name">Имя</label>
 <input id="name" type="text" class="form-control" maxlength="10" required/>
     </div>
     <div>
-<label for="height">height</label>
+<label for="height">Рост</label>
 <input id="height" maxlength="3" class="form-control" required/>
     </div>
-<button id="button" class='general-button btn btn-default' onclick="myFunction(); return false;"><h4>добавить</h4></button>
+<button id="button" class='general-button btn-lg btn btn-default' onclick="validateForm(); return false;">добавить</button>
 </form>
-<button id="remove" class='general-button btn btn-default' onclick="deleteSelectedRows(); return false;"><h4>удалить</h4></button>
-<button id="copy" class='general-button btn btn-default' onclick="copySelectedRows(); return false;"><h4>копировать</h4></button>
-<div id="demo"></div>
+<br>
+<div id="validationMessage"></div>
+
+
+
+
 </div>
 </body>
 </html>
